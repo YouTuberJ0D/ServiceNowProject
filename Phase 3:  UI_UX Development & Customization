@@ -1,0 +1,26 @@
+# Interface Design
+Designing and customizing ServiceNow interfaces—like forms, lists, and Service Portals—to ensure a user-friendly experience that aligns with business needs, using tools such as UI Policies, UI Actions, and the ServiceNow UI Builder.
+# Navigation Flow
+Description
+Click on try it 
+You can see the variables which you have created 
+Fill the details as per given below 
+Click on order now
+Procedure:
+Login to ServiceNow PDI
+Copy the Instance domain ex:  https://dev314490.service-now.com.
+Paste the URL in the Next tab and add Prefix SP to the URL.                                                
+Search for Network Requests.
+Fill the required details and click on submit
+New Requests will be generated with request numbers and users will get particular emails on the same.
+--Test 2: Testing Catalog variables in Service Portal
+Open Service Portal and Search ‘New Software’ (the same name which you have gave in meta)
+Fill the Details as given in below
+Click on Order now
+Click on Check out
+
+# Usability 
+You can see the order number (i.e: record number)
+
+# Tooltips & Help Text
+Tooltip/Help Texts icons added next to Users who have license
