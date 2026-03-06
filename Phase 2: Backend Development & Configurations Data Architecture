@@ -1,0 +1,24 @@
+# Data Architecture 
+Activity 1: A Data-Driven Workflow Approach
+User (Employee/Requestor)
+Submits a Network Request using Service Catalog
+Service Catalog Item (sc_cat_item)
+Captures request details → creates a Request (sc_request)
+Requested Item (sc_req_item)
+Each catalog item becomes a requested item
+Approval (sysapproval_approver)
+Manager/Network Admin approves the request
+Task (sc_task)
+Fulfillment task assigned to the Network Team
+
+# Business Rules
+Business Rules in ServiceNow were used to automate backend logic, such as auto-assigning tasks to the Network Support Group, 
+updating request status after approvals, and sending notifications when tasks or requests are completed.
+
+# Automation Logic
+Description
+The workflow automates the end-to-end process of network requests in ServiceNow. When a user submits a catalog item,
+the system generates a request, routes it for approval, creates fulfillment tasks for the network team, and sends notifications at each stage until closure.
+
+
+
