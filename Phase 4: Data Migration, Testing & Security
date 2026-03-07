@@ -1,0 +1,62 @@
+# Automation Logic
+Description
+The Workflow Editor was used to build the Software Installation Request Workflow,
+enabling dynamic approvals, automated task creation, and seamless fulfillment tracking for software requests.
+
+# Attach Workflow to Catalog Item
+Activity 1: Adding Workflow
+1.Open Catalog item that newly created
+2.Click on Process engine 
+3.Now add Software Request Workflow in the workflow field
+4.Click on Save
+
+# Tables Handling
+Activity 1: sc_request Table (Service Catalog Request Table)
+Open service now
+Search for Service Catalog > Requests
+Request Number (e.g., REQ0010006)
+Test 3: Testing catalog Requests, Items, Tasks
+Activity 2: sc_req_item Table (Requested Item Table)
+1. Under the service catalog requests click on items 
+Test 4:
+2.open the request item number 
+3. you can see the catalog item variables with backend names are auto filled.
+Activity 3: sc_task Table (Catalog Task Table)
+Do the same process for task table 
+Open and verify:
+Task assigned to Software Support Team
+Short Description (like Install Microsoft Office)
+Task State (Open, Work in Progress, Completed)
+
+# Finalize and Move Update Set
+Open Update sets that you have created recently
+Change the State from In Progress to Complete.
+Click on Update
+Click on ‘Export to XML’
+Download the File
+
+Testing the Update Set 
+Open another instance to test the update set
+Open another instance and search for Retrieve Update sets
+Click on ‘Export Update Set from XML’.
+Select the file that you have downloaded in the previous instance
+Click on Upload
+After uploading you can see the New Record 
+Open that record and see the data
+Click on Preview Update Set
+Click on Commit Update Set to transfer the whole data 
+Now you can see all the data was transferred 
+Validate that no elements are missing.
+
+# Data Integrity
+
+Description
+Field Validation and Automation
+  Mandatory Field Enforcement :Software-related details such as Software Name, Version, and Business Justification were made mandatory.
+This validation happened at both the client side (UI Policies) and the server side (Business Rules), preventing incomplete submissions.
+ Automatic Population of Values: To reduce manual effort, certain fields were auto-filled.
+For example, the Requested For field defaulted to the logged-in user, while Department and Location values were pulled dynamically from the user’s profile.
+ Testing & Validation:End-to-end testing confirmed that requests followed the correct lifecycle: submission → approvals → catalog task assignment → fulfillment → closure. 
+Notifications and logs were verified to ensure accuracy at every step.
+Data Reliability:These measures helped maintain integrity across all related tables — Request (REQ), Requested Item (RITM), and Catalog Task (SCTASK).
+Each layer was validated to prevent unauthorized or incomplete requests.
