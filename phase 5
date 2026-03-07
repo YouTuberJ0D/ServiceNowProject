@@ -1,0 +1,104 @@
+# Troubleshooting
+Description
+Workflow & Flow Execution Logs
+Verified end-to-end execution of the Software Installation Workflow using Flow Designer Execution Details.
+Variable Data Binding Issues
+Debugged misaligned catalog variables (Software Name, Version, Justification) that were not flowing into RITM or SCTASK tables.
+Form Behavior & Portal Testing
+Tested the catalog item in Service Portal to confirm UI policies worked correctly (e.g., showing additional fields only when "Licensed Software" was selected).
+
+# Adherence to Timelines
+Description
+Executed project based on the 7-phase roadmap:
+Update Sets
+Workflow Design & Planning
+Attach Workflow to Catalog item
+Requirement analisys & table identification
+Moving Update Sets
+Testing & Validation
+Deployment
+
+#Innovation
+Description
+End-to-End Automation: Streamlined the software installation request lifecycle by integrating Service Catalog Items, Workflows, and Flow Designer, eliminating manual approvals and task assignment.
+Optimized Task Handling: Automated catalog task generation and assignment to the correct IT fulfillment group based on software type and category.
+Maintainability & Scalability: Designed the solution to be easily maintained by admins or future developers by leveraging out-of-the-box Flow Designer logic and clear workflow documentation.
+User Experience Enhancements: Applied UI policies to dynamically display additional fields only when necessary (e.g., licensed software justification), making the request form cleaner and more user-friendly.
+
+# Document Technical Blueprint
+Description
+Variables:
+Software Name and Version
+Business Justification / Purpose of Installation
+Requested For (auto-populated with current user, but editable if requesting for others)
+License Type (Free / Licensed)
+Approval Use Cases:
+Software Asset Team Approval required automatically when Licensed Software is selected.
+IT Security Approval triggered for requests flagged as high-risk or requiring elevated permissions.
+Fulfillment Task Use Cases:
+Catalog tasks created for the IT Software Support group for installation.
+Automatic closure of RITM once all fulfillment tasks are completed successfully.
+
+# Document Technical Blueprint
+Description
+Flow Designer Workflow
+Steps included: Catalog Submission → Manager Approval → Conditional Software Asset Team Approval (for licensed software) → Task Creation for IT Fulfillment → Completion & Closure.
+Variable-to-Field Mapping Logic
+Mapped fulfillment details into Catalog Task (sc_task) for assignment to the correct IT group.
+Custom Table Schema 
+Captures additional metadata related to software requests (e.g., license category, cost center).
+Portal widget references (if any customizations were made)
+
+# Document Setup Manual
+Description
+·Provided step-by-step manual for recreating the solution in a new Personal Developer Instance (PDI):
+Catalog item creation
+Variable configuration
+Work Flow Designer 
+Requirement analysis
+Test submission data
+Screenshots and order of operations included for clarity.
+
+# Project Demo Video Planning
+
+Description
+ Demo includes:
+·        Portal walkthrough: Home → Network Services → Submit Request
+·        Live request submission
+·        Dynamic approval flow
+·        Email notification triggers
+·        Request status tracking
+· Includes narration for each step and role-based perspectives (requester, approver, fulfiller).
+
+# Visual Demonstration
+Description
+Captured:
+o   Form UI behaviour (e.g., dynamic fields)
+o   Approval records in the timeline
+o   Flow logs showing execution path
+      Annotated visuals with labels and highlights to explain each stage clearly.
+
+# Explanation Clarity
+Description
+· Documentation and presentation follow logical, sequential structure:
+·        What → Why → How → Outcome
+· Each step includes:
+·        Clear headings
+·        Labelled screenshots
+·        Explanatory notes for replicability.
+
+# Realism & Quality
+Description
+Workflow mimics real enterprise IT request handling, including:
+o   Role-based approvals
+o   Data validations
+·        Solution tested with realistic use cases and sample data.
+
+# Scalability & Future Plan
+Description
+Future enhancements considered:
+·   Auto-provisioning via integrations with network tools (e.g., Cisco DNA Centre, Ansible)
+·        Orchestration flows using ServiceNow Integration Hub
+·        Reporting dashboards for request volume, fulfilments, and etc
+·        Expansion to other IT services (e.g., device provisioning, access requests)
+
